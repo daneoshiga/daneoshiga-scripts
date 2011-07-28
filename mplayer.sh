@@ -1,4 +1,11 @@
 #!/bin/bash
+
+#script for marking point in video to continue watching later, if no point is
+#specified will start from beginning next time.
+
+#add get_time_pos bind on input.conf on any key you want
+#create folder .mplayer/continue
+
 BASENAME=`basename "$1"`
 SAVEFILE="$HOME/.mplayer/continue/$BASENAME"
 LASTPOS=$(tail -n 1 "$SAVEFILE")
