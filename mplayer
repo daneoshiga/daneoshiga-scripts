@@ -8,7 +8,9 @@
 
 BASENAME=`basename "$1"`
 SAVEFILE="$HOME/.mplayer/continue/$BASENAME"
-LASTPOS=$(tail -n 1 "$SAVEFILE")
+if [[ -f $SAVEFILE ]];then
+    LASTPOS=$(tail -n 1 "$SAVEFILE")
+fi
 
 if [[ -z $LASTPOS ]]; then
     LASTPOS=0
@@ -18,9 +20,11 @@ fi
     grep 'ANS_TIME_POSITION' | \
     cut -d"=" -f2 > "$SAVEFILE"
 
-LASTPOS=$(tail -n 1 "$SAVEFILE")
-if [[ -z $LASTPOS ]]; then
-    rm "$SAVEFILE" 
+if [[ -f $SAVEFILE ]];then
+    LASTPOS=$(tail -n 1 "$SAVEFILE")
+    if [[ -z $LASTPOS ]]; then
+        rm "$SAVEFILE" 
+    fi
 fi
 
 
