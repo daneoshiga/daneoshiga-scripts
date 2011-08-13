@@ -10,3 +10,6 @@ playrar.sh
 mplayer
     implements "bookmarks" on mplayer, if any bookmark is set, the video will
     continue from that point when played again
+
+ttytter.txt
+    isn't mine, but is a Perl twitter client that I use.
