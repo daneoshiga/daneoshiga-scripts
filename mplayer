@@ -5,17 +5,22 @@
 
 #add get_time_pos bind on input.conf on any key you want
 #create folder .mplayer/continue
+#FIXME simplify the script
 
 BASENAME=`basename "$1"`
+#if savefile exists, grab that last pos
 SAVEFILE="$HOME/.mplayer/continue/$BASENAME"
 if [[ -f $SAVEFILE ]];then
     LASTPOS=$(tail -n 1 "$SAVEFILE")
 fi
 
+#if there's no lastpos, set it to zero
 if [[ -z $LASTPOS ]]; then
     LASTPOS=0
 fi
 
+#if first parameter is file prepare to save bookmark
+#else pass all parameters to mplayer
 if [[ -f "$1" ]];then
     /usr/bin/mplayer "$1" ${*:2} -ss $LASTPOS | \
         grep 'ANS_TIME_POSITION' | \
@@ -24,6 +29,7 @@ else
     /usr/bin/mplayer ${*:1}
 fi
 
+#if no bookmark is saved, remove the file
 if [[ -f $SAVEFILE ]];then
     LASTPOS=$(tail -n 1 "$SAVEFILE")
     if [[ -z $LASTPOS ]]; then
