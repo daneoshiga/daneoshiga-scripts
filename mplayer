@@ -16,9 +16,13 @@ if [[ -z $LASTPOS ]]; then
     LASTPOS=0
 fi
 
-/usr/bin/mplayer "$1" ${*:2} -ss $LASTPOS | \
-    grep 'ANS_TIME_POSITION' | \
-    cut -d"=" -f2 > "$SAVEFILE"
+if [[ -f "$1" ]];then
+    /usr/bin/mplayer "$1" ${*:2} -ss $LASTPOS | \
+        grep 'ANS_TIME_POSITION' | \
+        cut -d"=" -f2 > "$SAVEFILE"
+else
+    /usr/bin/mplayer ${*:1}
+fi
 
 if [[ -f $SAVEFILE ]];then
     LASTPOS=$(tail -n 1 "$SAVEFILE")
@@ -26,5 +30,3 @@ if [[ -f $SAVEFILE ]];then
         rm "$SAVEFILE" 
     fi
 fi
-
-
