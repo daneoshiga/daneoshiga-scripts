@@ -7,7 +7,6 @@
 #create folder .mplayer/continue
 #FIXME simplify the script
 
-echo $1
 BASENAME=`basename "$1"`
 #if savefile exists, grab that last pos
 SAVEFILE="$HOME/.mplayer/continue/$BASENAME"
