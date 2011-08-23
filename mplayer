@@ -26,7 +26,7 @@ if [[ -f "$1" ]];then
         grep 'ANS_TIME_POSITION' | \
         cut -d"=" -f2 > "$SAVEFILE"
 else
-    /usr/bin/mplayer ${*:1}
+    /usr/bin/mplayer $*
 fi
 
 #if no bookmark is saved, remove the file

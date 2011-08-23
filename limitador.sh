@@ -1,5 +1,4 @@
 #!/bin/sh
-sleep 20
 if pidof -x $(basename $0) > /dev/null; then
     for p in $(pidof -x $(basename $0)); do
         if [ $p -ne $$ ]; then
