@@ -37,12 +37,12 @@ do
     IDLE=$(xprintidle)
     if [ $IDLE -lt $LIMIT ] && [ $FLAG = 1 ]
     then
-        screen -S torrent -X stuff CCSSxx
+        screen -S torrent -p 0 -X stuff CCSSxx
         curl -s "http://localhost:10025/action/set/download/limit/10" > /dev/null
         FLAG=0
     elif [ $IDLE -gt $LIMIT ] && [ $FLAG = 0 ]
     then
-        screen -S torrent -X stuff CDss
+        screen -S torrent -p 0 -X stuff CDss
         curl -s "http://localhost:10025/action/set/download/limit/50" > /dev/null
         FLAG=1
     fi
