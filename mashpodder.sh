@@ -7,6 +7,9 @@
 # Licensed under the GPLv3
 #
 # Originally based on BashPodder by Linc Fessenden 12/1/2004
+#
+# Download order, speed limit and adding already downloaded episodes to the
+# limit added by Danilo Shiga <daniloshiga@gmail.com> 
 
 ### START USER CONFIGURATION
 # Default values can be set here. Command-line flags override some of these.
