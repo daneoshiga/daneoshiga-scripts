@@ -14,3 +14,10 @@ mplayer
 
 playrar.sh
     plays video files inside rar files.
+
+mashpodder.sh
+    my fork of mashpodder, the shell script podcast downloader, i've added:
+        speed limit config for wget
+        made it download always the older podcast first
+        consider the number of podcasts already on folder in the limit on
+        mp.conf, not only for the number of new downloads on that execution.
