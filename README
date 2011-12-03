@@ -21,5 +21,6 @@ mashpodder.sh
         made it download always the older podcast first
         consider the number of podcasts already on folder in the limit on
         mp.conf, not only for the number of new downloads on that execution.
-    other files are needed for mashpodder to work:
+    added the other needed files to mashpodder
+    mashpodder original repository 
     http://code.google.com/p/mashpodder/
