@@ -1,2 +1,2 @@
 #!/bin/bash
-sleep 60s;conky &
+sleep 300s;conky &
