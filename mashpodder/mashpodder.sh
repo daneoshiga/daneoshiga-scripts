@@ -296,7 +296,7 @@ fetch_podcasts () {
         AFILE=(${FILE/ / })
 
 #        for URL in $FILE; do
-        for ((i = $TOTAL;i>=0;i--)); do
+        for ((i = $TOTAL - 1;i>=0;i--)); do
             URL=${AFILE[$i]}
             FILENAME=''
             if [ "$DLNUM" -lt "$COUNTER" ]; then
