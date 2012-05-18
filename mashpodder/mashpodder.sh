@@ -287,7 +287,7 @@ fetch_podcasts () {
             FILE=$(wget -q $FEED -O - | tr '\r' '\n' | tr \' \" | \
             sed -n 's/.*url="\([^"]*\)".*/\1/p')
 
-        CURRENT=$(ls $DATADIR/*.mp3 | wc -l)
+        CURRENT=$(find $DATADIR/ -maxdepth 1 -name *.mp3 | wc -l)
         COUNTER=$(expr $COUNTER + $CURRENT + 1)
 
 
