@@ -39,3 +39,8 @@ gpodownload.sh
 -
 
 an small script to download videos from specific channels on gpodder
+
+ttytter.txt
+-
+
+CLI twitter client made in perl [ttytter](http://www.floodgap.com/software/ttytter/)
