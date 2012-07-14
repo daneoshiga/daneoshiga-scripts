@@ -6,5 +6,3 @@ gpo download "http://gdata.youtube.com/feeds/base/users/kincommunity/uploads?ord
 gpo download "http://gdata.youtube.com/feeds/base/users/modernmom/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile"
 gpo update "http://gdata.youtube.com/feeds/base/users/TheOfficialHungry/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile"
 gpo download "http://gdata.youtube.com/feeds/base/users/TheOfficialHungry/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile"
-gpo update   "http://gdata.youtube.com/feeds/base/users/trailers/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile"
-gpo download "http://gdata.youtube.com/feeds/base/users/trailers/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile"
